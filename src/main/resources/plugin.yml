@@ -1,0 +1,15 @@
+name: Kitchen
+version: 1.0.0
+main: me.santio.kitchen.Kitchen
+description: The core plugin for MHKitchen
+author: Santio71
+api-version: '1.19'
+commands:
+  generate:
+    description: temp command
+  component:
+    description: Spawn in a component
+    permission: kitchen.admin.component
+  resetdata:
+    description: Reset all data
+    permission: kitchen.admin.resetdata
