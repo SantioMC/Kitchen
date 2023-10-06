@@ -38,11 +38,11 @@ class Kitchen: JavaPlugin(), KoinComponent {
         server.pluginManager.registerEvents(InventoryListener, this)
         server.pluginManager.registerEvents(ComponentListener, this)
 
-        get<ComponentRegistry>().apply { import() }
+        get<ComponentRegistry>().import()
     }
 
     override fun onDisable() {
-        get<ComponentRegistry>().apply { export() }
+        get<ComponentRegistry>().export()
     }
 
     companion object {
