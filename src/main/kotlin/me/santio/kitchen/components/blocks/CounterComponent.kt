@@ -21,6 +21,10 @@ class CounterComponent: BlockComponent, KoinComponent {
         return Material.SMOOTH_STONE.createBlockData()
     }
 
+    override fun onDestroy() {
+        associatedBlock?.getRelative(BlockFace.UP)?.type = Material.AIR
+    }
+
     override fun onInteract(player: Player) {
         if (hasPlate && player.inventory.itemInMainHand.type.isAir) {
             hasPlate = false

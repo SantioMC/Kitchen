@@ -38,6 +38,7 @@ class ComponentRegistry: KoinComponent {
      * @param location The location to remove the block component at
      */
     fun remove(location: Location) {
+        getComponentAt(location)?.onDestroy()
         components.remove(location.block.location.toVector())
     }
 

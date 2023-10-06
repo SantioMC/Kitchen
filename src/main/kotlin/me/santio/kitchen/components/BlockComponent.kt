@@ -9,6 +9,7 @@ interface BlockComponent: Component {
     fun blockType(): BlockData
 
     fun onPlace() {}
+    fun onDestroy() {}
     fun onInteract(player: Player) {}
 
 }
